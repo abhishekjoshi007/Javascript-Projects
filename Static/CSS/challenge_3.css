@@ -1,0 +1,29 @@
+.container-3
+{
+    border: 1px solid darkgray;
+    margin: 100px auto;
+    width: 80%;
+    text-align: center; 
+    padding: 20px 10px;
+}
+.flex-box-rps img
+{
+    width: 150px;
+    height: 150px;
+}
+.flex-box-rps img:hover
+{
+    box-shadow: 0px 10px 50px darkseagreen;
+}
+.flex-box-rps
+{
+
+    display: flex;
+    padding: 10px;
+    border: 2px solid darkgray;
+    justify-content: space-around;
+    /*
+    flex-direction: row;
+    */
+    flex-wrap: wrap;
+}
