@@ -1,0 +1,34 @@
+.container-2
+{
+border: 1px solid darkgray;
+margin: 100px auto;
+width: 70%;
+text-align: center;
+padding: 20px 10px;
+
+}
+.flex-box-container-2
+{
+    display: flex;
+    padding: 10px;
+    border: 2px solid darkgray;
+    justify-content: space-around;
+    /*
+    flex-direction: row;
+    */
+    flex-wrap: wrap;
+   
+
+}
+.flex-box-container-2 img
+{
+
+flex-wrap: wrap;
+padding: 10px;
+justify-content: space-around;/*for centeralisation do it with oddnumber*/
+}
+.flex-box-container-2 div
+{
+padding: 10px;
+align-items: center;
+}
