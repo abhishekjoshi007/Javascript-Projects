@@ -57,7 +57,8 @@ function finalmessage([yourscore,computerscore])
         return {'message':'YOU WON!','color':'green'};
     }
 }
-function rpsfrontend(humanchoice,botchoice,finalmessage)//here final message is passed as 3 parameter
+function rpsfrontend(humanchoice,botchoice,finalmessage)
+//here final message is passed as 3 parameter
 {
     var imgdatabase={
         'rock':document.getElementById("rock").src,
