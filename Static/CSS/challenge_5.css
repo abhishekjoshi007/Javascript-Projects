@@ -1,0 +1,53 @@
+.container-5
+{
+    border: 1px solid darkgray;
+    margin: 100px auto;
+    width: 80%;
+    text-align: center; 
+    padding: 20px 10px;
+}
+.flex-blackjack-row-1,.flex-blackjack-row-2,.flex-blackjack-row-3
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding:10px;
+    flex-direction:row;
+    border: 1px solid darkgray;
+}
+
+.flex-blackjack-row-1
+{
+    background:url(../Images/green-blackboard.jpg);
+   color: white;
+}
+
+.flex-blackjack-row-1 div
+{
+    border: 1px solid black;
+    height: 350px;
+    padding: 10px;
+    //for equal space
+    flex: 1;
+}
+
+.flex-blackjack-row-1 img{
+    width: 25%;
+    padding: 10px;
+  
+}
+
+.flex-blackjack-row-2 button{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.flex-blackjack-row-2 div{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+table,th{
+    border: 1px solid black;
+    padding: 5px;
+}
