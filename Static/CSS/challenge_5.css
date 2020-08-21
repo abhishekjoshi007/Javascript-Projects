@@ -16,10 +16,10 @@
     border: 1px solid darkgray;
 }
 
-.flex-blackjack-row-1
+.flex-blackjack-row-1,.flex-blackjack-row-2
 {
-    background:url(../Images/green-blackboard.jpg);
-   color: white;
+    background:url(../Images/green-blackboard.jpg) left;
+   color:white;
 }
 
 .flex-blackjack-row-1 div
@@ -27,7 +27,7 @@
     border: 1px solid black;
     height: 350px;
     padding: 10px;
-    //for equal space
+    /*To take equal amount of space and fill up */
     flex: 1;
 }
 
