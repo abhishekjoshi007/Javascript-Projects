@@ -47,7 +47,10 @@ function randomcard()
 
 
 function showcard(activePlayer,card)
-{
+{  
+    //we are putting "BUST" cond. Here. 
+    if(activePlayer['score'] <=21)
+    {
  //alert('ouch,you just ckick me!');
  let cardimage=document.createElement('img');
 
@@ -55,6 +58,7 @@ function showcard(activePlayer,card)
  cardimage.src=`Static/blackjack_assets/images/${card}.png`;
  document.querySelector(activePlayer['div']).appendChild(cardimage);
  hitsound.play();
+    }
 }
 
 //Deal button to refresh everything that is present
@@ -75,6 +79,17 @@ function blackjackdeal()
     {
         dealerimages[i].remove();
     }
+
+    //after clicking deal the score should reset
+    YOU['score']=0;
+    DEALER['scrore']=0;
+
+    document.querySelector('#your-blackjack-result').textContent=0;
+    document.querySelector('#dealer-blackjack-result').textContent=0;
+    
+    document.querySelector('#your-blackjack-result').style.color='white';
+    document.querySelector('#dealer-blackjack-result').style.color='white';
+    
 }
 
 function updatescore(activePlayer,card)
@@ -98,6 +113,15 @@ function updatescore(activePlayer,card)
 
 function showscore(activeplayer)
 {
+  if(activeplayer['score'] > 21)
+  {
+      document.querySelector(activeplayer['scorespan']).textContent='BUST!';
+      document.querySelector(activeplayer['scorespan']).style.color='red';
+      
+  }
+  else
+  {
   document.querySelector(activeplayer['scorespan']).textContent=activeplayer['score'];
+  }
 }
 
