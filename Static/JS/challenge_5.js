@@ -159,24 +159,34 @@ function showscore(activeplayer)
   }
 }
 
-function blackjackstand()
+//building async function
+function sleep(ms)
+{
+    return new Promise(resolve =>setTimeout(resolve,ms))
+}
+
+async function blackjackstand()
 {
    //whrn stand button is clicked
    blackjackgame['isstand']=true;
+
+   //for automating bot 
+   while(DEALER['score'] < 16 && blackjackgame['isstand']===true)
+   {
     let card=randomcard();
    //console.log(card);
    showcard(DEALER,card);
    updatescore(DEALER,card);
    showscore(DEALER);
-  
-   if(DEALER['score'] > 15)
-   {
+   await sleep(1000);
+   }
+ 
        //here dealer is done playing
        blackjackgame['turnover']=true;
 
        let winner=compute();
        showresult(winner);
-   }
+   
 
 }
 
